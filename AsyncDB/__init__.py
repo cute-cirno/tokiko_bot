@@ -6,10 +6,10 @@ from nonebot.permission import SUPERUSER
 from nonebot.matcher import Matcher
 from nonebot.adapters import Message
 from nonebot.adapters.onebot.v11 import MessageEvent
-from nonebot.params import CommandArg
-from .config import config
+from nonebot.params import CommandArg, StateParam
+from .config import ConfigModel
 
-from database import MySQLPool
+from .database import MySQLPool
 
 # 插件元数据
 __plugin_meta__ = PluginMetadata(
@@ -20,7 +20,7 @@ __plugin_meta__ = PluginMetadata(
 
 # 获取 nonebot 驱动
 driver = get_driver()
-
+config = driver.config
 
 @driver.on_startup
 async def init_mysql_pool():
@@ -42,7 +42,7 @@ mysql_query = on_command("sql", permission=SUPERUSER)
 async def handle_first_receive(
     matcher: Matcher,
     event: MessageEvent,
-    state: dict,
+    state: StateParam = StateParam(),
     args: Message = CommandArg(),
 ):
     args = str(event.get_message()).strip()
@@ -51,7 +51,7 @@ async def handle_first_receive(
 
 
 @mysql_query.got("query", prompt="Please input your MySQL query:")
-async def handle_query(matcher: Matcher, event: MessageEvent, state: dict):
+async def handle_query(matcher: Matcher, event: MessageEvent, state: StateParam = StateParam()):
     query = state["query"]
     db = await MySQLPool.create_instance()
     try:
