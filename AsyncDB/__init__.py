@@ -1,15 +1,19 @@
 import asyncio
 
 from nonebot import get_driver, on_command
+from nonebot.exception import FinishedException
 from nonebot.plugin import PluginMetadata
 from nonebot.permission import SUPERUSER
 from nonebot.matcher import Matcher
 from nonebot.adapters import Message
 from nonebot.adapters.onebot.v11 import MessageEvent
-from nonebot.params import CommandArg, StateParam
-from .config import ConfigModel
+from nonebot.params import CommandArg
 
+from .config import ConfigModel,config
 from .database import MySQLPool
+
+from nonebot import require
+scheduler = require("nonebot_plugin_apscheduler").scheduler
 
 # 插件元数据
 __plugin_meta__ = PluginMetadata(
@@ -20,11 +24,10 @@ __plugin_meta__ = PluginMetadata(
 
 # 获取 nonebot 驱动
 driver = get_driver()
-config = driver.config
 
 @driver.on_startup
 async def init_mysql_pool():
-    await MySQLPool.create_instance(
+    db = await MySQLPool.create_instance(
         host=config.database_host,
         port=config.database_port,
         user=config.database_user,
@@ -33,6 +36,7 @@ async def init_mysql_pool():
         minsize=config.db_connection_minsize,
         maxsize=config.db_connection_maxsize,
     )
+    asyncio.create_task(MySQLPool._instance.heart_beat())
 
 
 mysql_query = on_command("sql", permission=SUPERUSER)
@@ -42,20 +46,18 @@ mysql_query = on_command("sql", permission=SUPERUSER)
 async def handle_first_receive(
     matcher: Matcher,
     event: MessageEvent,
-    state: StateParam = StateParam(),
     args: Message = CommandArg(),
 ):
-    args = str(event.get_message()).strip()
-    if args:
-        state["query"] = args
-
-
-@mysql_query.got("query", prompt="Please input your MySQL query:")
-async def handle_query(matcher: Matcher, event: MessageEvent, state: StateParam = StateParam()):
-    query = state["query"]
+    args = str(args)
     db = await MySQLPool.create_instance()
     try:
-        result = await db.execute_query(query)
-        await matcher.finish(f"Query Result: {result}")
+        result = await db.execute_query(args)
+        max_count = 5
+        for r in result:
+            if max_count > 0:
+                await matcher.send(' '.join(map(str,r)))
+                max_count -= 1
+    except FinishedException as fe:
+        pass
     except Exception as e:
-        await matcher.finish(f"Query failed: {e}")
+        await matcher.finish(f"Query failed: {e}\n{result}")

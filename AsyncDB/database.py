@@ -5,6 +5,7 @@ class MySQLPool:
     _instance = None
     _lock = asyncio.Lock()
     _initialized = False
+    _running = True
 
     def __new__(cls, *args, **kwargs):
         if not cls._instance:
@@ -74,16 +75,20 @@ class MySQLPool:
                     print(f"Query failed after {retry_attempts} attempts: {e}")
                     raise
 
-    async def keep_connections_alive(self,check_interval):
-        while self._running:
-            async with self.pool.acquire() as conn:
-                try:
-                    async with conn.cursor() as cursor:
-                        await cursor.execute("SELECT 1;")
-                        await cursor.fetchone()
-                except aiomysql.OperationalError:
-                    pass  # 处理错误，但不需要采取其他行动
-            await asyncio.sleep(check_interval)
+    async def heart_beat(self):
+            while self._running:
+                async with self.pool.acquire() as conn:
+                    try:
+                        async with conn.cursor() as cursor:
+                            await cursor.execute("SELECT 1;")
+                            await cursor.fetchone()
+                    except aiomysql.OperationalError:
+                        # 处理错误并移除失效连接
+                        print("Detected invalid connection, removing from pool...")
+                        self.pool._free.remove(conn)
+                        conn.close()
+                        await self.pool._fill_free_pool(True)  # 补充新的连接
+                await asyncio.sleep(60)  # 设置适当的心跳间隔时间
 
     def close(self):
         self._running = False
