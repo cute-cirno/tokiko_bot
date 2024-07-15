@@ -10,7 +10,7 @@ from nonebot.adapters.onebot.v11 import MessageEvent
 from nonebot.params import CommandArg
 
 from .config import ConfigModel,config
-from .database import MySQLPool
+from .database import DatabaseConnectionPool
 
 from nonebot import require
 scheduler = require("nonebot_plugin_apscheduler").scheduler
@@ -27,7 +27,7 @@ driver = get_driver()
 
 @driver.on_startup
 async def init_mysql_pool():
-    db = await MySQLPool.create_instance(
+    db = await DatabaseConnectionPool.create(
         host=config.database_host,
         port=config.database_port,
         user=config.database_user,
@@ -36,7 +36,7 @@ async def init_mysql_pool():
         minsize=config.db_connection_minsize,
         maxsize=config.db_connection_maxsize,
     )
-    asyncio.create_task(MySQLPool._instance.heart_beat())
+    asyncio.create_task(db.heartbeat())
 
 
 mysql_query = on_command("sql", permission=SUPERUSER)
@@ -48,10 +48,14 @@ async def handle_first_receive(
     event: MessageEvent,
     args: Message = CommandArg(),
 ):
-    args = str(args)
-    db = await MySQLPool.create_instance()
+    arg = str(args)
+    db = await DatabaseConnectionPool.create()
+    sql_type = arg.split()[0].lower()
     try:
-        result = await db.execute_query(args)
+        if sql_type == "select":
+            result = await db.execute_query(arg)
+        else:
+            result = await db.execute_update(arg)
         max_count = 5
         for r in result:
             if max_count > 0:

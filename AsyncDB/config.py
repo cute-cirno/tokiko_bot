@@ -12,7 +12,7 @@ BaseConfigModel = (
 
 class ConfigModel(BaseConfigModel):
     database_host: Optional[str] = "127.0.0.1"
-    database_port: int = None
+    database_port: int = 3306
     database_user: Optional[str] = "root"
     database_pwd: Optional[str] = None
     database_db: Optional[str] = None

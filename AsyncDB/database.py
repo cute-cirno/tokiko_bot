@@ -1,96 +1,88 @@
 import aiomysql
+from typing import Optional, ClassVar
 import asyncio
 
-class MySQLPool:
-    _instance = None
-    _lock = asyncio.Lock()
-    _initialized = False
-    _running = True
+class DatabaseConnectionPool:
+    _instance: Optional['DatabaseConnectionPool'] = None
+    _lock: ClassVar[asyncio.Lock] = asyncio.Lock()
 
-    def __new__(cls, *args, **kwargs):
-        if not cls._instance:
-            cls._instance = super(MySQLPool, cls).__new__(cls)
+    def __new__(cls):
+        if cls._instance is None:
+            raise RuntimeError("This class must be instantiated using 'await DatabaseConnectionPool.create()'")
         return cls._instance
 
-    async def _init_pool(self, host, port, user, password, db, minsize=2, maxsize=10, **kwargs):
-        self.pool = await aiomysql.create_pool(
-            host=host,
-            port=port,
-            user=user,
-            password=password,
-            db=db,
-            minsize=minsize,
-            maxsize=maxsize,
-            **kwargs
-        )
-        self.host = host
-        self.port = port
-        self.user = user
-        self.password = password
-        self.db = db
-        self._initialized = True
+    def __init__(self):
+        if not hasattr(self, '_initialized'):
+            raise RuntimeError("This class must be initialized using 'await DatabaseConnectionPool.create()'")
 
     @classmethod
-    async def create_instance(cls, **kwargs):
+    async def create(cls,**kwargs) -> 'DatabaseConnectionPool':
         async with cls._lock:
             if cls._instance is None:
-                self = cls()
-                await self._init_pool(**kwargs)
-                cls._instance = self
-            elif not cls._instance._initialized:
-                await cls._instance._init_pool(**kwargs)
+                instance = super(DatabaseConnectionPool, cls).__new__(cls)
+                await instance._async_init(**kwargs)
+                cls._instance = instance
             return cls._instance
 
-    async def acquire_connection(self):
+    async def _async_init(self,**kwargs):
+        self.loop = asyncio.get_running_loop()
+        self.pool: aiomysql.Pool = await aiomysql.create_pool(**kwargs)
+        self._initialized = True
+
+    async def get_connection(self) -> aiomysql.Connection:
+        """Asynchronously get a connection from the pool."""
+        return await self.pool.acquire()
+
+    async def execute_query(self, query: str, params=None):
+        """
+        Asynchronously execute a query using a connection from the pool.
+        
+        :param query: SQL query to execute.
+        :param params: Optional parameters to pass with the query.
+        """
+        async with await self.get_connection() as connection:
+            async with connection.cursor() as cursor:
+                await cursor.execute(query, params)
+                return await cursor.fetchall()  # 获取所有结果
+
+
+    async def execute_update(self, query: str, params=None):
+        """
+        Asynchronously execute an update or insert query.
+
+        :param query: SQL query to execute.
+        :param params: Optional parameters to pass with the query.
+        """
+        async with await self.get_connection() as connection:
+            async with connection.cursor() as cursor:
+                await cursor.execute(query, params)
+                await connection.commit()  # 提交更改
+                return cursor.rowcount  # 返回影响的行数
+
+    async def close_pool(self):
+        """Close all connections in the pool."""
+        self.pool.close()
+        await self.pool.wait_closed()
+        
+    async def heartbeat(self):
+        """Check the health of the pool and reconnect if necessary."""
         while True:
-            conn = await self.pool.acquire()
             try:
-                async with conn.cursor() as cursor:
-                    await cursor.execute("SELECT 1;")
-                    result = await cursor.fetchone()
-                    if result:
-                        return conn
-                    else:
-                        raise aiomysql.OperationalError("Connection is invalid")
-            except aiomysql.OperationalError:
-                print("Connection is invalid, trying to acquire a new connection...")
-                self.pool.release(conn)  # 释放无效连接
-                await asyncio.sleep(1)  # 短暂等待后重试
+                async with self.pool.acquire() as connection:
+                    await connection.ping()
+                await asyncio.sleep(300)  # 如果ping成功，退出循环
+            except (aiomysql.Error, asyncio.TimeoutError) as e:
+                # 处理ping失败的情况
+                print(f"Connection ping failed: {e}. Trying to reconnect...")
+                await self.handle_connection_failure(connection)
+                continue  # 尝试重新获取连接并ping
 
-    async def execute_query(self, query, params=None):
-        retry_attempts = 3
-        for attempt in range(retry_attempts):
-            try:
-                conn = await self.acquire_connection()
-                async with conn.cursor() as cursor:
-                    await cursor.execute(query, params)
-                    result = await cursor.fetchall()
-                    self.pool.release(conn)  # 释放连接回池
-                    return result
-            except (aiomysql.MySQLError, aiomysql.OperationalError) as e:
-                if attempt < retry_attempts - 1:
-                    print(f"Query failed, retrying... (attempt {attempt + 1})")
-                    await asyncio.sleep(1)  # 短暂等待后重试
-                else:
-                    print(f"Query failed after {retry_attempts} attempts: {e}")
-                    raise
-
-    async def heart_beat(self):
-            while self._running:
-                async with self.pool.acquire() as conn:
-                    try:
-                        async with conn.cursor() as cursor:
-                            await cursor.execute("SELECT 1;")
-                            await cursor.fetchone()
-                    except aiomysql.OperationalError:
-                        # 处理错误并移除失效连接
-                        print("Detected invalid connection, removing from pool...")
-                        self.pool._free.remove(conn)
-                        conn.close()
-                        await self.pool._fill_free_pool(True)  # 补充新的连接
-                await asyncio.sleep(60)  # 设置适当的心跳间隔时间
-
-    def close(self):
-        self._running = False
-        if self.pool:
-            self.pool.close()
+    async def handle_connection_failure(self, connection):
+        """Close the failed connection and possibly log the event."""
+        try:
+            # 尝试关闭不健康的连接
+            connection.close()
+            await connection.wait_closed()
+        except Exception as e:
+            # 处理连接关闭失败的情况
+            print(f"Failed to close unhealthy connection: {e}")
