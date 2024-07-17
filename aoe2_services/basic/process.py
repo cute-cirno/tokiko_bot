@@ -1,16 +1,18 @@
 import asyncio
 
 from ..utils.browser_utils import Aoe2Browser
-from ..utils.common_utils import image_to_base64
+from ..utils.common_utils import image_to_base64, load_json_file
 from ..config import config
 
 
-async def getItembyList(iteminfo: list) -> str:
+async def get_item_base64_image(itemname: str) -> str:
+    IDdict = await load_json_file(r"./data/AOE/allID.json")
+    iteminfo = IDdict[itemname]
     if not config.base_url:
         raise ValueError("base_url is not set in config")
     else:
         base_url = config.base_url
-    
+
     browser_instance = Aoe2Browser()
     browser = await browser_instance.get_browser()
     if iteminfo[0] == "Normal":
@@ -73,12 +75,13 @@ async def getItembyList(iteminfo: list) -> str:
         await asyncio.sleep(0.1)
         image = await infobox.screenshot()
         await page.close()
-        return image_to_base64(image)
+        return "base64://" + image_to_base64(image)
     except Exception:
         if page:
             await page.close()
         raise
-    
+
+
 def replaceWord(text: str) -> str:
     replaceWords = [
         ("HP", "生命"),
@@ -135,3 +138,86 @@ def replaceWord(text: str) -> str:
     for i in replaceWords:
         text = text.replace(i[0], i[1])
     return text
+
+async def get_civ_base64_image(eng_civname: str) -> str:
+    if not config.base_url:
+        raise ValueError("base_url is not set in config")
+    else:
+        base_url = config.base_url
+    url = base_url + f"/?lng=zh#{eng_civname}"
+    
+    browser_instance = Aoe2Browser()
+    browser = await browser_instance.get_browser()
+    try:
+        page = await browser.new_page()
+        await page.set_viewport_size({"width": 300, "height": 900})
+        await page.goto(url)
+        card = await page.query_selector("#civtext")
+        if not card:
+            raise ValueError("Element not found")
+        image = await card.screenshot()
+        await page.close()
+        return "base64://" + image_to_base64(image)
+    except Exception:
+        if page:
+            await page.close()
+        raise
+    
+
+async def get_gathering_rate_base64_image(civName: str, age: int) -> str:
+    browser_instance = Aoe2Browser()
+    browser = await browser_instance.get_browser()
+    await browser.new_context()
+    try:
+        page = await browser.new_page()
+        await page.set_viewport_size({"width": 1080, "height": 960})
+        await page.goto("https://www.aoe2database.com/gathering_rates/en")
+        button = await page.wait_for_selector(
+            "#ROOT-2521314 > vaadin-app-layout > div.layout-view.layout-centered > div > div > div.selector-container > div:nth-child(1) > div:nth-child(1) > vaadin-select"
+        )
+        if not button:            
+            raise ValueError("Element not found")
+        await button.click()
+
+        age_selector = [
+            "#ROOT-2521314 > vaadin-app-layout > div.layout-view.layout-centered > div > div > div.selector-container > div:nth-child(3) > vaadin-button:nth-child(1)",
+            "#ROOT-2521314 > vaadin-app-layout > div.layout-view.layout-centered > div > div > div.selector-container > div:nth-child(3) > vaadin-button.age-button.button-active",
+            "#ROOT-2521314 > vaadin-app-layout > div.layout-view.layout-centered > div > div > div.selector-container > div:nth-child(3) > vaadin-button:nth-child(5)",
+            "#ROOT-2521314 > vaadin-app-layout > div.layout-view.layout-centered > div > div > div.selector-container > div:nth-child(3) > vaadin-button:nth-child(7)",
+        ]
+        # 等待折叠栏内容加载完成
+        await page.wait_for_selector(
+            "#ROOT-2521314 > vaadin-app-layout > div.layout-view.layout-centered > div > div > div.selector-container > div:nth-child(1) > div:nth-child(1) > vaadin-select"
+        )
+        n = 0
+        for i in range(45):
+            check = await page.wait_for_selector(
+                f"body > vaadin-select-overlay > vaadin-list-box > vaadin-item:nth-child({i+1})"
+            )
+            if not check:
+                break
+            name = await check.get_attribute("label")
+            if name and name == civName:
+                n = i + 1
+                break
+        age_select = await page.wait_for_selector(age_selector[age - 1])
+        item = await page.wait_for_selector(
+            f"body > vaadin-select-overlay > vaadin-list-box > vaadin-item:nth-child({n}) > div"
+        )
+        if not item or not age_select:
+            raise ValueError("Element not found")
+        await item.click()
+        await age_select.click()
+        info = await page.wait_for_selector(
+            "#ROOT-2521314 > vaadin-app-layout > div.layout-view.layout-centered > div"
+        )
+        # info = await page.query_selector('#ROOT-2521314 > vaadin-app-layout > div.layout-view.layout-centered > div')
+        if not info:            
+            raise ValueError("Element not found")
+        image = await info.screenshot()
+        await page.close()
+        return "base64://" + image_to_base64(image)
+    finally:
+        if page:
+            await page.close()
+        raise
