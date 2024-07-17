@@ -25,7 +25,6 @@ class DatabaseConnectionPool:
             return cls._instance
 
     async def _async_init(self,**kwargs):
-        self.loop = asyncio.get_running_loop()
         self.pool: aiomysql.Pool = await aiomysql.create_pool(**kwargs)
         self._initialized = True
 
