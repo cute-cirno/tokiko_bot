@@ -13,7 +13,7 @@ async def get_item_base64_image(itemname: str) -> str:
     else:
         base_url = config.base_url
 
-    browser_instance = Aoe2Browser()
+    browser_instance = await Aoe2Browser.init()
     browser = await browser_instance.get_browser()
     if iteminfo[0] == "Normal":
         url = base_url + "/?lng=zh#Spanish"
@@ -146,7 +146,7 @@ async def get_civ_base64_image(eng_civname: str) -> str:
         base_url = config.base_url
     url = base_url + f"/?lng=zh#{eng_civname}"
     
-    browser_instance = Aoe2Browser()
+    browser_instance = await Aoe2Browser.init()
     browser = await browser_instance.get_browser()
     try:
         page = await browser.new_page()
@@ -165,7 +165,7 @@ async def get_civ_base64_image(eng_civname: str) -> str:
     
 
 async def get_gathering_rate_base64_image(civName: str, age: int) -> str:
-    browser_instance = Aoe2Browser()
+    browser_instance = await Aoe2Browser.init()
     browser = await browser_instance.get_browser()
     await browser.new_context()
     try:

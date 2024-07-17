@@ -5,7 +5,7 @@ from nonebot.typing import T_State
 from nonebot.adapters import Message
 from nonebot.params import CommandArg, ArgPlainText
 from ..utils.common_utils import load_json_file
-from process import get_item_base64_image
+from .process import get_item_base64_image
 
 item_query = on_command(
     "kj,",

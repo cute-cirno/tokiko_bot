@@ -15,6 +15,8 @@ civquiz = on_command(
 async def _(matcher: Matcher, event: MessageEvent, args: Message = CommandArg()):
     text = str(args)
     haveList, notHaveList = quiz_handler(text)
+    if len(haveList)==0 and len(notHaveList)==0:
+        await matcher.finish("未输入查询单位")
     result = await choseCiv(haveList, notHaveList)
     civlist = result[0]
     invalidlist = result[1]
@@ -57,7 +59,7 @@ def quiz_handler(text: str) -> Tuple[List[str], List[str]]:
 
 async def choseCiv(havelist: list, nothavelist: list) -> Tuple[List[str], List[str]]:
     infodict = await load_json_file(r"./data/AOE/IDInfoDict_checked.json")
-    allCivlist = infodict["building_87"]["availCivsCnameList"]
+    allCivlist = set(infodict["building_87"]["availCivsCnameList"])
     invalidlist = []
     cname_map = {v["Cname"]: v for v in infodict.values()}
     for itemname in havelist:
@@ -74,4 +76,5 @@ async def choseCiv(havelist: list, nothavelist: list) -> Tuple[List[str], List[s
             allCivlist &= civlist
         else:
             invalidlist.append(itemname)
+    allCivlist = list(allCivlist)
     return (allCivlist, invalidlist)
