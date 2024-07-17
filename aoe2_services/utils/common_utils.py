@@ -54,4 +54,4 @@ def image_to_base64(image_data: bytes) -> str:
     Encodes an image to Base64 and returns the encoded string.
     """
     base64_data = base64.b64encode(image_data)
-    return base64_data.decode("utf-8")
+    return "base64://" + base64_data.decode("utf-8")
