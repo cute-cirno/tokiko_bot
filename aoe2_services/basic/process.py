@@ -1,10 +1,10 @@
 import asyncio
 
 from ..utils.browser_utils import Aoe2Browser
-from ..utils.common_utils import image_to_base64, load_json_file
+from ..utils.common_utils import image_to_base64, load_json_file, async_lru_cache
 from ..config import config
 
-
+@async_lru_cache(maxsize=20)
 async def get_item_base64_image(itemname: str) -> str:
     IDdict = await load_json_file(r"./data/AOE/allID.json")
     iteminfo = IDdict[itemname]
@@ -75,7 +75,7 @@ async def get_item_base64_image(itemname: str) -> str:
         await asyncio.sleep(0.1)
         image = await infobox.screenshot()
         await page.close()
-        return "base64://" + image_to_base64(image)
+        return  image_to_base64(image)
     except Exception:
         if page:
             await page.close()
@@ -145,7 +145,7 @@ async def get_civ_base64_image(eng_civname: str) -> str:
     else:
         base_url = config.base_url
     url = base_url + f"/?lng=zh#{eng_civname}"
-    
+    print(url)
     browser_instance = await Aoe2Browser.init()
     browser = await browser_instance.get_browser()
     try:
@@ -157,7 +157,7 @@ async def get_civ_base64_image(eng_civname: str) -> str:
             raise ValueError("Element not found")
         image = await card.screenshot()
         await page.close()
-        return "base64://" + image_to_base64(image)
+        return image_to_base64(image)
     except Exception:
         if page:
             await page.close()
@@ -216,8 +216,10 @@ async def get_gathering_rate_base64_image(civName: str, age: int) -> str:
             raise ValueError("Element not found")
         image = await info.screenshot()
         await page.close()
-        return "base64://" + image_to_base64(image)
+        return image_to_base64(image)
+    except Exception as e:
+        print(e)
+        raise e
     finally:
         if page:
             await page.close()
-        raise

@@ -2,6 +2,8 @@ import json
 import base64
 from typing import Any, Dict
 from .cache_utils import CachedFileReader
+from functools import wraps
+from collections import OrderedDict
 
 async def imagefile_to_base64(image_path: str) -> str:
     """
@@ -55,3 +57,28 @@ def image_to_base64(image_data: bytes) -> str:
     """
     base64_data = base64.b64encode(image_data)
     return "base64://" + base64_data.decode("utf-8")
+
+
+
+def async_lru_cache(maxsize=20):
+    def decorator(func):
+        cache = OrderedDict()
+
+        @wraps(func)
+        async def wrapper(*args, **kwargs):
+            # 使用参数构建一个键
+            key = args + tuple(kwargs.items())
+            # 如果缓存中已有这个键，将其移到字典末尾表示最近使用
+            if key in cache:
+                cache.move_to_end(key)
+                return cache[key]
+            # 执行函数并缓存结果
+            result = await func(*args, **kwargs)
+            # 添加新的结果到缓存，若缓存已满，移除最早的条目
+            cache[key] = result
+            if len(cache) > maxsize:
+                cache.popitem(last=False)
+            return result
+        return wrapper
+    return decorator
+

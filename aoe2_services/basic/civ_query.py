@@ -19,11 +19,11 @@ async def _(marcher: Matcher, event: MessageEvent, arg: Message = CommandArg()):
     civname = str(arg)
     if not await check_civ_name(civname):
         await marcher.finish("错误文明名称，请重试！")
-    civName = await get_engname_by_civname(civname)
-    image_msg = MessageSegment.image(await get_civ_base64_image(civname))
+    eng_civname = await get_engname_by_civname(civname)
+    image_msg = MessageSegment.image(await get_civ_base64_image(eng_civname))
     # 发送图片消息给用户
     await marcher.send(image_msg)
-    techtreeimg = MessageSegment.image(await imagefile_to_base64(f"./data/AOE/image/{civName}.png"))
+    techtreeimg = MessageSegment.image(await imagefile_to_base64(f"./data/AOE/image/{eng_civname}.png"))
     await marcher.finish(techtreeimg)
     
 

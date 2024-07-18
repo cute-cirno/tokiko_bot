@@ -45,15 +45,16 @@ async def _(
         
 @item_query.got("order")
 async def _(
-    matcher: Matcher, state: T_State, event: MessageEvent, arg: str = ArgPlainText()
-):
+    matcher: Matcher, state: T_State, event: MessageEvent,order:str=ArgPlainText()):
     list_for_choose = state["list_for_choose"]
-    if arg.isdigit() and int(arg) <= len(list_for_choose) and int(arg) > 0:
-        index = int(arg)
+    if order.isdigit() and int(order) <= len(list_for_choose) and int(order) > 0:
+        index = int(order)
         itemName = list_for_choose[index - 1]
     else:
         await matcher.finish("错误序号,退出选择")
     image_msg = MessageSegment.image(await get_item_base64_image(itemName))
+    if not image_msg:
+        await matcher.finish(str(index))
     await matcher.finish(image_msg)
         
         
