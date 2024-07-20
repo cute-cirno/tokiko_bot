@@ -32,7 +32,7 @@ class DatabaseConnectionPool:
         """Asynchronously get a connection from the pool."""
         return await self.pool.acquire()
 
-    async def execute_query(self, query: str, params=None):
+    async def execute_query(self, query: str, params=None)->list[tuple]:
         """
         Asynchronously execute a query using a connection from the pool.
         

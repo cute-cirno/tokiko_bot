@@ -52,6 +52,7 @@ async def handle_first_receive(
     db = await DatabaseConnectionPool.create()
     sql_type = arg.split()[0].lower()
     try:
+        msg = ''
         if sql_type == "select":
             result = await db.execute_query(arg)
         else:
@@ -59,8 +60,9 @@ async def handle_first_receive(
         max_count = 5
         for r in result:
             if max_count > 0:
-                await matcher.send(' '.join(map(str,r)))
+                msg += ' '.join(map(str,r))
                 max_count -= 1
+        await matcher.finish(msg)
     except FinishedException as fe:
         pass
     except Exception as e:
