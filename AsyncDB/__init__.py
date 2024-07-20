@@ -6,8 +6,9 @@ from nonebot.plugin import PluginMetadata
 from nonebot.permission import SUPERUSER
 from nonebot.matcher import Matcher
 from nonebot.adapters import Message
-from nonebot.adapters.onebot.v11 import MessageEvent
+from nonebot.adapters.onebot.v11 import MessageEvent,MessageSegment
 from nonebot.params import CommandArg
+from nonebot_plugin_txt2img import Txt2Img
 
 from .config import ConfigModel,config
 from .database import DatabaseConnectionPool
@@ -53,7 +54,7 @@ async def handle_first_receive(
     sql_type = arg.split()[0].lower()
     try:
         msg = ''
-        if sql_type == "select":
+        if sql_type in ('select','desc','show'):
             result = await db.execute_query(arg)
         else:
             result = await db.execute_update(arg)
@@ -61,7 +62,13 @@ async def handle_first_receive(
         for r in result:
             if max_count > 0:
                 msg += ' '.join(map(str,r))
+                msg += '\n'
                 max_count -= 1
+        font_size = 18
+        text = msg
+        Txt2Img().set_font_size(font_size)
+        pic = Txt2Img().draw('', text)
+        msg = MessageSegment.image(pic)
         await matcher.finish(msg)
     except FinishedException as fe:
         pass
