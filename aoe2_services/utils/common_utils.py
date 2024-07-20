@@ -59,7 +59,6 @@ def image_to_base64(image_data: bytes) -> str:
     return "base64://" + base64_data.decode("utf-8")
 
 
-
 def async_lru_cache(maxsize=20):
     def decorator(func):
         cache = OrderedDict()

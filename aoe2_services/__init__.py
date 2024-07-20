@@ -6,6 +6,7 @@ from .basic.civ_quiz import *
 from .basic.civ_query import *
 from .basic.gathering_rate import *
 from .basic.item_query import *
+from career import *
 
 driver = get_driver()
 
