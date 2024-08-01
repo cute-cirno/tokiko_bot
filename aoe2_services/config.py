@@ -6,7 +6,7 @@ from nonebot.compat import PYDANTIC_V2
 from pydantic import BaseModel
 
 BaseConfigModel = (
-    get_model_with_config({"coerce_numbers_to_str": True}) if PYDANTIC_V2 else BaseModel
+    BaseModel
 )
 
 

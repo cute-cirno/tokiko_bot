@@ -9,7 +9,7 @@ from nonebot_plugin_txt2img import Txt2Img
 from nonebot.adapters import Message
 from nonebot.params import CommandArg,ArgPlainText
 from ...AsyncDB import DatabaseConnectionPool as DB
-from .align_str import align_strings
+from ..utils.align_str import align_strings
 
 career_info = on_command('帝国生涯', priority=5)
 
@@ -30,7 +30,7 @@ async def _(matcher:Matcher, event:MessageEvent, arg: Message = CommandArg()):
         msg = '有多个相关玩家，请输入对应玩家序号：\n'
         msg_list = []
         for i, player in enumerate(player_list):
-            msg_list.append(f'\n{i+1}. {player[1]} ({player[3]}/{player[2]})')
+            msg_list.append(f'\n{i+1}. {player[1]} ({player[3]}/{player[2]})'.split())
         msg_list = align_strings(msg_list)
         msg += str('\n'.join(msg_list))
         matcher.state['player_list'] = player_list

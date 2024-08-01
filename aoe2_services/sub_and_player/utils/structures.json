@@ -1,0 +1,3939 @@
+{
+    "8": {
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": {
+            "name": "NoneType"
+        }
+    },
+    "3": {
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": [
+            {
+                "cls": "int",
+                "target_id": "int",
+                "data": {
+                    "casters": [],
+                    "chat": [],
+                    "countdown": "int",
+                    "diplomacy": "str",
+                    "drafts": [],
+                    "game_type": "str",
+                    "id": "int",
+                    "link": "str",
+                    "map": "str",
+                    "paused": "bool",
+                    "players": [
+                        {
+                            "age": "str",
+                            "civilization": "str",
+                            "color_hex": "str",
+                            "color_id": "int",
+                            "composition": [
+                                {}
+                            ],
+                            "country_code": "str",
+                            "id": "int",
+                            "mirror": "bool",
+                            "mmr_rm_1v1": "int",
+                            "mmr_rm_tg": "int",
+                            "name": "str",
+                            "number": "int",
+                            "openings": [],
+                            "random": "bool",
+                            "random_team": "bool",
+                            "rank_rm_1v1": "int",
+                            "team": "int",
+                            "team_number": "int",
+                            "user_mmr": "int",
+                            "user_name": "str",
+                            "verified": "bool",
+                            "warning": "bool"
+                        }
+                    ],
+                    "rematch": "bool",
+                    "server": "str",
+                    "specs_allowed": "bool",
+                    "start_timestamp": "int",
+                    "stats": {
+                        "teams": [
+                            {}
+                        ],
+                        "team_stats": {
+                            "vs": [
+                                {}
+                            ],
+                            "map": [
+                                {}
+                            ],
+                            "duration": [
+                                {}
+                            ],
+                            "activity": [
+                                {}
+                            ],
+                            "time": [
+                                {}
+                            ],
+                            "eapm": [
+                                {}
+                            ],
+                            "rate": [
+                                {}
+                            ],
+                            "elo": [
+                                {}
+                            ],
+                            "civ": [
+                                {}
+                            ],
+                            "match_count": [
+                                {}
+                            ],
+                            "age": [
+                                {}
+                            ],
+                            "map_ladder": [
+                                {}
+                            ],
+                            "score": [
+                                {}
+                            ],
+                            "favored": [
+                                {}
+                            ],
+                            "favor": [
+                                {}
+                            ],
+                            "odds": [
+                                {}
+                            ]
+                        },
+                        "players": [
+                            {
+                                "civilization": "str",
+                                "team_id": "int",
+                                "player": {
+                                    "id": "int",
+                                    "verified": "bool",
+                                    "warning": "bool",
+                                    "country_code": "str",
+                                    "name": "str",
+                                    "supporter": "NoneType"
+                                }
+                            }
+                        ],
+                        "player_stats": {
+                            "vs": [
+                                {}
+                            ],
+                            "map": [
+                                {}
+                            ],
+                            "duration": [
+                                {}
+                            ],
+                            "eapm": [
+                                {}
+                            ],
+                            "activity": [
+                                {}
+                            ],
+                            "time": [
+                                {}
+                            ],
+                            "rate": [
+                                {}
+                            ],
+                            "elo": [
+                                {}
+                            ],
+                            "civ": [
+                                {}
+                            ],
+                            "match_count": [
+                                {}
+                            ],
+                            "age": [
+                                {}
+                            ],
+                            "map_ladder": [
+                                {}
+                            ]
+                        }
+                    },
+                    "team_names": {
+                        "1": "str",
+                        "0": "str"
+                    },
+                    "team_size": "str",
+                    "teams": [
+                        [
+                            {}
+                        ]
+                    ],
+                    "validation_errors": []
+                }
+            }
+        ]
+    },
+    "2": {
+        "casters": [],
+        "chat": [],
+        "countdown": "int",
+        "diplomacy": "str",
+        "drafts": [],
+        "game_type": "str",
+        "id": "int",
+        "link": "str",
+        "map": "str",
+        "paused": "bool",
+        "players": [
+            {
+                "age": "str",
+                "civilization": "str",
+                "color_hex": "str",
+                "color_id": "int",
+                "composition": [
+                    {}
+                ],
+                "country_code": "str",
+                "id": "int",
+                "mirror": "bool",
+                "mmr_rm_1v1": "int",
+                "mmr_rm_tg": "int",
+                "name": "str",
+                "number": "int",
+                "openings": [],
+                "random": "bool",
+                "random_team": "bool",
+                "rank_rm_1v1": "int",
+                "team": "int",
+                "team_number": "int",
+                "user_mmr": "int",
+                "user_name": "str",
+                "verified": "bool",
+                "warning": "bool"
+            }
+        ],
+        "rematch": "bool",
+        "server": "str",
+        "specs_allowed": "bool",
+        "start_timestamp": "int",
+        "stats": {
+            "teams": [
+                {}
+            ],
+            "team_stats": {
+                "vs": [
+                    {}
+                ],
+                "map": [
+                    {}
+                ],
+                "duration": [
+                    {}
+                ],
+                "activity": [
+                    {}
+                ],
+                "time": [
+                    {}
+                ],
+                "eapm": [
+                    {}
+                ],
+                "rate": [
+                    {}
+                ],
+                "elo": [
+                    {}
+                ],
+                "civ": [
+                    {}
+                ],
+                "match_count": [
+                    {}
+                ],
+                "age": [
+                    {}
+                ],
+                "map_ladder": [
+                    {}
+                ],
+                "score": [
+                    {}
+                ],
+                "favored": [
+                    {}
+                ],
+                "favor": [
+                    {}
+                ],
+                "odds": [
+                    {}
+                ]
+            },
+            "players": [
+                {
+                    "civilization": "str",
+                    "team_id": "int",
+                    "player": {
+                        "id": "int",
+                        "verified": "bool",
+                        "warning": "bool",
+                        "country_code": "str",
+                        "name": "str",
+                        "supporter": "NoneType"
+                    }
+                }
+            ],
+            "player_stats": {
+                "vs": [
+                    {}
+                ],
+                "map": [
+                    {}
+                ],
+                "duration": [
+                    {}
+                ],
+                "eapm": [
+                    {}
+                ],
+                "activity": [
+                    {}
+                ],
+                "time": [
+                    {}
+                ],
+                "rate": [
+                    {}
+                ],
+                "elo": [
+                    {}
+                ],
+                "civ": [
+                    {}
+                ],
+                "match_count": [
+                    {}
+                ],
+                "age": [
+                    {}
+                ],
+                "map_ladder": [
+                    {}
+                ]
+            }
+        },
+        "team_names": {
+            "1": "str",
+            "0": "str"
+        },
+        "team_size": "str",
+        "teams": [
+            [
+                {}
+            ]
+        ],
+        "validation_errors": [],
+        "lobby_name": "str",
+        "score": "str",
+        "series_id": "str",
+        "tournament": "str",
+        "tournament_link": "str",
+        "cls": "int",
+        "target_id": "int",
+        "data": {
+            "casters": [],
+            "chat": [],
+            "countdown": "int",
+            "diplomacy": "str",
+            "drafts": [],
+            "game_type": "str",
+            "id": "int",
+            "link": "str",
+            "map": "str",
+            "paused": "bool",
+            "players": [
+                {
+                    "age": "str",
+                    "civilization": "str",
+                    "color_hex": "str",
+                    "color_id": "int",
+                    "composition": [
+                        {}
+                    ],
+                    "country_code": "str",
+                    "id": "int",
+                    "mirror": "bool",
+                    "mmr_rm_1v1": "int",
+                    "mmr_rm_tg": "int",
+                    "name": "str",
+                    "number": "int",
+                    "openings": [],
+                    "random": "bool",
+                    "random_team": "bool",
+                    "rank_rm_1v1": "int",
+                    "team": "int",
+                    "team_number": "int",
+                    "user_name": "str",
+                    "verified": "bool",
+                    "warning": "bool"
+                }
+            ],
+            "rematch": "bool",
+            "server": "str",
+            "specs_allowed": "bool",
+            "start_timestamp": "int",
+            "stats": {
+                "teams": [
+                    {}
+                ],
+                "team_stats": {
+                    "vs": [
+                        {}
+                    ],
+                    "map": [
+                        {}
+                    ],
+                    "duration": [
+                        {}
+                    ],
+                    "activity": [
+                        {}
+                    ],
+                    "time": [
+                        {}
+                    ],
+                    "eapm": [
+                        {}
+                    ],
+                    "rate": [
+                        {}
+                    ],
+                    "elo": [
+                        {}
+                    ],
+                    "civ": [
+                        {}
+                    ],
+                    "match_count": [
+                        {}
+                    ],
+                    "age": [
+                        {}
+                    ],
+                    "map_ladder": [
+                        {}
+                    ],
+                    "score": [
+                        {}
+                    ],
+                    "favored": [
+                        {}
+                    ],
+                    "favor": [
+                        {}
+                    ],
+                    "odds": [
+                        {}
+                    ]
+                },
+                "players": [
+                    {
+                        "civilization": "str",
+                        "team_id": "int",
+                        "player": {
+                            "id": "int",
+                            "verified": "bool",
+                            "warning": "bool",
+                            "country_code": "str",
+                            "name": "str",
+                            "supporter": "NoneType"
+                        }
+                    }
+                ],
+                "player_stats": {
+                    "vs": [
+                        {}
+                    ],
+                    "map": [
+                        {}
+                    ],
+                    "duration": [
+                        {}
+                    ],
+                    "eapm": [
+                        {}
+                    ],
+                    "activity": [
+                        {}
+                    ],
+                    "time": [
+                        {}
+                    ],
+                    "rate": [
+                        {}
+                    ],
+                    "elo": [
+                        {}
+                    ],
+                    "civ": [
+                        {}
+                    ],
+                    "match_count": [
+                        {}
+                    ],
+                    "age": [
+                        {}
+                    ],
+                    "map_ladder": [
+                        {}
+                    ]
+                }
+            },
+            "team_names": {
+                "1": "str",
+                "0": "str"
+            },
+            "team_size": "str",
+            "teams": [
+                [
+                    {}
+                ]
+            ],
+            "validation_errors": []
+        },
+        "unknown_version": "bool"
+    },
+    "1": {
+        "country_code": "str",
+        "id": "int",
+        "match_count": "int",
+        "name": "str",
+        "online": "bool",
+        "playing": "bool",
+        "stream_link": "str",
+        "stream_title": "str",
+        "stream_viewers": "int",
+        "streaming": "bool",
+        "team": "str",
+        "verified": "bool",
+        "warning": "bool",
+        "last_match": "int",
+        "mmr_rm_1v1": "int",
+        "rank_rm_1v1": "int",
+        "rank_tournament": "int",
+        "match_diplomacy": "str",
+        "match_id": "int",
+        "match_map": "str",
+        "match_vs": "str",
+        "spectate_link": "str",
+        "status": "str",
+        "series_id": "str",
+        "spectating": "str",
+        "tournament": "str",
+        "tournament_link": "str",
+        "match_lobby": "str",
+        "supporter": "bool",
+        "cls": "int",
+        "target_id": "int",
+        "data": {
+            "country_code": "str",
+            "id": "int",
+            "last_match": "int",
+            "match_count": "int",
+            "match_diplomacy": "str",
+            "match_id": "int",
+            "match_map": "str",
+            "mmr_rm_1v1": "int",
+            "name": "str",
+            "online": "bool",
+            "playing": "bool",
+            "rank_rm_1v1": "int",
+            "rank_tournament": "int",
+            "spectate_link": "str",
+            "status": "str",
+            "stream_link": "str",
+            "stream_title": "str",
+            "streaming": "bool",
+            "team": "str",
+            "verified": "bool",
+            "warning": "bool"
+        },
+        "lobby_link": "str",
+        "queue_banned": "int"
+    },
+    "5": {
+        "total": "int",
+        "records": [
+            {
+                "match_id": "int",
+                "id": "int",
+                "winner": "bool",
+                "name": "str",
+                "opp_id": "int",
+                "opp_name": "str",
+                "opp_civilization": "str",
+                "civilization": "str",
+                "vod": "str",
+                "map_name": "str",
+                "played": "int",
+                "file_id": "str",
+                "person": "str",
+                "verified": "bool",
+                "opp_verified": "bool",
+                "country_code": "str",
+                "opp_country_code": "str"
+            }
+        ],
+        "civilizations": [
+            {}
+        ],
+        "players": [
+            {}
+        ],
+        "maps": [
+            {}
+        ],
+        "page": "int",
+        "size": "int",
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": {
+            "total": "int",
+            "records": [
+                {
+                    "match_id": "int",
+                    "id": "int",
+                    "winner": "bool",
+                    "name": "str",
+                    "opp_id": "int",
+                    "opp_name": "str",
+                    "opp_civilization": "str",
+                    "civilization": "str",
+                    "vod": "str",
+                    "map_name": "str",
+                    "played": "int",
+                    "file_id": "str",
+                    "person": "str",
+                    "verified": "bool",
+                    "opp_verified": "bool",
+                    "country_code": "str",
+                    "opp_country_code": "str"
+                }
+            ],
+            "civilizations": [
+                {}
+            ],
+            "players": [
+                {}
+            ],
+            "maps": [
+                {}
+            ],
+            "page": "int",
+            "size": "int"
+        }
+    },
+    "4": {
+        "total": "int",
+        "records": [
+            {
+                "id": "int",
+                "map_name": "str",
+                "played": "int",
+                "type": "str",
+                "team_size": "str",
+                "diplomacy": "str",
+                "lobby_name": "str",
+                "players": [
+                    {
+                        "id": "int",
+                        "name": "str",
+                        "color_id": "int",
+                        "color_hex": "str",
+                        "civilization": "str",
+                        "rating": "int",
+                        "mirror": "bool",
+                        "random": "bool",
+                        "forcepick": "bool",
+                        "person": "str",
+                        "number": "int",
+                        "file_ids": [
+                            {}
+                        ],
+                        "winner": "bool",
+                        "vod": "NoneType",
+                        "team": "int",
+                        "verified": "bool",
+                        "warning": "NoneType",
+                        "country_code": "NoneType",
+                        "supporter": "NoneType"
+                    }
+                ],
+                "teams": [
+                    [
+                        {}
+                    ]
+                ],
+                "teams_map": {
+                    "0": [
+                        {}
+                    ],
+                    "1": [
+                        {}
+                    ]
+                },
+                "team_names": {},
+                "duration": "float",
+                "chat": [],
+                "tournament": "NoneType",
+                "tournament_link": "NoneType",
+                "series_id": "NoneType",
+                "build": "str"
+            }
+        ],
+        "maps": [
+            {}
+        ],
+        "tournaments": [
+            {}
+        ],
+        "civilizations": [
+            {}
+        ],
+        "players": [
+            {}
+        ],
+        "teams": [
+            {}
+        ],
+        "diplomacy_types": [
+            {}
+        ],
+        "versions": [
+            {}
+        ],
+        "page": "int",
+        "size": "int",
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": {
+            "total": "int",
+            "records": [
+                {
+                    "id": "int",
+                    "map_name": "str",
+                    "played": "int",
+                    "type": "str",
+                    "team_size": "str",
+                    "diplomacy": "str",
+                    "lobby_name": "str",
+                    "players": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "color_id": "int",
+                            "color_hex": "str",
+                            "civilization": "str",
+                            "rating": "int",
+                            "mirror": "bool",
+                            "random": "bool",
+                            "forcepick": "bool",
+                            "person": "str",
+                            "number": "int",
+                            "file_ids": [
+                                {}
+                            ],
+                            "winner": "bool",
+                            "vod": "NoneType",
+                            "team": "int",
+                            "verified": "bool",
+                            "warning": "NoneType",
+                            "country_code": "NoneType",
+                            "supporter": "NoneType"
+                        }
+                    ],
+                    "teams": [
+                        [
+                            {}
+                        ]
+                    ],
+                    "teams_map": {
+                        "0": [
+                            {}
+                        ],
+                        "1": [
+                            {}
+                        ]
+                    },
+                    "team_names": {},
+                    "duration": "float",
+                    "chat": [],
+                    "tournament": "NoneType",
+                    "tournament_link": "NoneType",
+                    "series_id": "NoneType",
+                    "build": "str"
+                }
+            ],
+            "maps": [
+                {}
+            ],
+            "tournaments": [
+                {}
+            ],
+            "civilizations": [
+                {}
+            ],
+            "players": [
+                {}
+            ],
+            "teams": [
+                {}
+            ],
+            "diplomacy_types": [
+                {}
+            ],
+            "versions": [
+                {}
+            ],
+            "page": "int",
+            "size": "int"
+        }
+    },
+    "11": {
+        "tournaments": [
+            {
+                "id": "str",
+                "name": "str",
+                "upcoming": "bool",
+                "live": "bool",
+                "tier": "str"
+            }
+        ],
+        "name": "str",
+        "url": "str",
+        "type": "str",
+        "tier": "str",
+        "rounds": {
+            "Round 1": {
+                "rage-forest-5-round-1-03-team-freakinandy-vs-team-modri": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-1-01-team-barles-vs-team-sitaux": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-1-02-team-accm-vs-team-slam": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-1-01-team-daut-vs-team-ganji": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-1-04-team-hera-vs-team-kingstone": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-1-03-team-tatoh-vs-team-vinchester": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-1-02-team-sora-kuma-vs-team-valas": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-1-04-team-daniel-vs-team-somero": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            },
+            "Round 2": {
+                "rage-forest-5-round-2-02-team-hera-vs-team-tatoh": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-2-03-team-daut-vs-team-freakinandy": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-2-03-team-barles-vs-team-sora-kuma": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-2-01-team-sitaux-vs-team-valas": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-2-02-team-slam-vs-team-somero": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-2-01-team-ganji-vs-team-modri": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-2-04-team-kingstone-vs-team-vinchester": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-2-04-team-accm-vs-team-daniel": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            },
+            "Round 3": {
+                "rage-forest-5-round-3-02-team-daut-vs-team-modri": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-3-01-team-tatoh-vs-team-valas": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-3-01-team-ganji-vs-team-slam": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-3-04-team-sora-kuma-vs-team-vinchester": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-3-03-team-accm-vs-team-somero": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-3-03-team-kingstone-vs-team-sitaux": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-3-02-team-barles-vs-team-hera": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-3-04-team-daniel-vs-team-freakinandy": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            },
+            "Round 4": {
+                "rage-forest-5-round-4-02-team-sitaux-vs-team-tatoh": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-4-01-team-barles-vs-team-valas": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-4-02-team-ganji-vs-team-somero": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-4-04-team-accm-vs-team-freakinandy": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-4-04-team-hera-vs-team-vinchester": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-4-01-team-daut-vs-team-slam": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-4-03-team-kingstone-vs-team-sora-kuma": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-round-4-03-team-daniel-vs-team-modri": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            },
+            "Quarterfinals": {
+                "rage-forest-5-quarterfinals-team-sitaux-vs-team-somero": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "int",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-quarterfinals-team-daut-vs-team-ganji": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "int",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-quarterfinals-team-valas-vs-team-vinchester": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "int",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-quarterfinals-team-barles-vs-team-slam": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "winner": "bool",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "int",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            },
+            "Semifinals": {
+                "rage-forest-5-semifinals-team-barles-vs-team-valas": {
+                    "participants": [
+                        {
+                            "score": "NoneType",
+                            "winner": "NoneType",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "bool",
+                    "finished": "bool",
+                    "bestof": "int",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [
+                        {
+                            "preset": "str",
+                            "url": "str",
+                            "type": "str"
+                        }
+                    ],
+                    "missing": "NoneType",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "rage-forest-5-semifinals-team-ganji-vs-team-sitaux": {
+                    "participants": [
+                        {
+                            "score": "NoneType",
+                            "winner": "NoneType",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "int",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "NoneType",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            }
+        },
+        "matches": [],
+        "tournament_id": "str",
+        "series_id": "NoneType",
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": {
+            "tournaments": [
+                {
+                    "id": "str",
+                    "name": "str",
+                    "upcoming": "bool",
+                    "live": "bool",
+                    "tier": "str"
+                }
+            ],
+            "name": "str",
+            "url": "str",
+            "type": "str",
+            "tier": "str",
+            "rounds": {
+                "Round 1": {
+                    "rage-forest-5-round-1-03-team-freakinandy-vs-team-modri": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-1-01-team-barles-vs-team-sitaux": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-1-02-team-accm-vs-team-slam": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-1-01-team-daut-vs-team-ganji": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-1-04-team-hera-vs-team-kingstone": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-1-03-team-tatoh-vs-team-vinchester": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-1-02-team-sora-kuma-vs-team-valas": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-1-04-team-daniel-vs-team-somero": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    }
+                },
+                "Round 2": {
+                    "rage-forest-5-round-2-02-team-hera-vs-team-tatoh": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-2-03-team-daut-vs-team-freakinandy": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-2-03-team-barles-vs-team-sora-kuma": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-2-01-team-sitaux-vs-team-valas": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-2-02-team-slam-vs-team-somero": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-2-01-team-ganji-vs-team-modri": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-2-04-team-kingstone-vs-team-vinchester": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-2-04-team-accm-vs-team-daniel": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    }
+                },
+                "Round 3": {
+                    "rage-forest-5-round-3-02-team-daut-vs-team-modri": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-3-01-team-tatoh-vs-team-valas": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-3-01-team-ganji-vs-team-slam": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-3-04-team-sora-kuma-vs-team-vinchester": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-3-03-team-accm-vs-team-somero": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-3-03-team-kingstone-vs-team-sitaux": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-3-02-team-barles-vs-team-hera": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-3-04-team-daniel-vs-team-freakinandy": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    }
+                },
+                "Round 4": {
+                    "rage-forest-5-round-4-02-team-sitaux-vs-team-tatoh": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-4-01-team-barles-vs-team-valas": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-4-02-team-ganji-vs-team-somero": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-4-04-team-accm-vs-team-freakinandy": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-4-04-team-hera-vs-team-vinchester": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-4-01-team-daut-vs-team-slam": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-4-03-team-kingstone-vs-team-sora-kuma": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-round-4-03-team-daniel-vs-team-modri": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "NoneType",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    }
+                },
+                "Quarterfinals": {
+                    "rage-forest-5-quarterfinals-team-sitaux-vs-team-somero": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "int",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-quarterfinals-team-daut-vs-team-ganji": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "int",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-quarterfinals-team-valas-vs-team-vinchester": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "NoneType",
+                        "finished": "bool",
+                        "bestof": "int",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-quarterfinals-team-barles-vs-team-slam": {
+                        "participants": [
+                            {
+                                "score": "int",
+                                "winner": "bool",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "NoneType",
+                        "finished": "bool",
+                        "bestof": "int",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "int",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    }
+                },
+                "Semifinals": {
+                    "rage-forest-5-semifinals-team-barles-vs-team-valas": {
+                        "participants": [
+                            {
+                                "score": "NoneType",
+                                "winner": "NoneType",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "bool",
+                        "finished": "bool",
+                        "bestof": "int",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [
+                            {
+                                "preset": "str",
+                                "url": "str",
+                                "type": "str"
+                            }
+                        ],
+                        "missing": "NoneType",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    },
+                    "rage-forest-5-semifinals-team-ganji-vs-team-sitaux": {
+                        "participants": [
+                            {
+                                "score": "NoneType",
+                                "winner": "NoneType",
+                                "player": {
+                                    "id": "NoneType",
+                                    "name": "str"
+                                }
+                            }
+                        ],
+                        "started": "NoneType",
+                        "finished": "bool",
+                        "bestof": "int",
+                        "played": "float",
+                        "url": "NoneType",
+                        "drafts": [],
+                        "missing": "NoneType",
+                        "recs": "bool",
+                        "live": "bool",
+                        "scheduled": "bool"
+                    }
+                }
+            },
+            "matches": [],
+            "tournament_id": "str",
+            "series_id": "NoneType"
+        }
+    },
+    "30": {
+        "tournaments": [
+            {
+                "id": "str",
+                "name": "str",
+                "upcoming": "bool",
+                "live": "bool",
+                "tier": "str"
+            }
+        ],
+        "name": "str",
+        "url": "str",
+        "type": "str",
+        "tier": "str",
+        "rounds": {
+            "Quarterfinals": {
+                "wsvg-world-championship-maldives-2015-quarterfinals-dogao-vs-yo": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "int",
+                                "name": "str",
+                                "verified": "bool",
+                                "warning": "bool",
+                                "country_code": "str",
+                                "supporter": "NoneType"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "wsvg-world-championship-maldives-2015-quarterfinals-jordan-aoe-vs-riut": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "int",
+                                "name": "str",
+                                "verified": "bool",
+                                "warning": "bool",
+                                "country_code": "str",
+                                "supporter": "NoneType"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "wsvg-world-championship-maldives-2015-quarterfinals-bact-vs-lojza": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "int",
+                                "name": "str",
+                                "verified": "bool",
+                                "warning": "bool",
+                                "country_code": "str",
+                                "supporter": "NoneType"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "wsvg-world-championship-maldives-2015-quarterfinals-lovecheng-vs-theviper": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "int",
+                                "name": "str",
+                                "verified": "bool",
+                                "warning": "bool",
+                                "country_code": "str",
+                                "supporter": "bool"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            },
+            "Semifinals": {
+                "wsvg-world-championship-maldives-2015-semifinals-riut-vs-yo": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "int",
+                                "name": "str",
+                                "verified": "bool",
+                                "warning": "bool",
+                                "country_code": "str",
+                                "supporter": "NoneType"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "wsvg-world-championship-maldives-2015-semifinals-bact-vs-theviper": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "int",
+                                "name": "str",
+                                "verified": "bool",
+                                "warning": "bool",
+                                "country_code": "str",
+                                "supporter": "NoneType"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            },
+            "Winner's Finals": {
+                "wsvg-world-championship-maldives-2015-winner-s-finals-riut-vs-theviper": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "int",
+                                "name": "str",
+                                "verified": "bool",
+                                "warning": "bool",
+                                "country_code": "str",
+                                "supporter": "NoneType"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            },
+            "Grand Finals": {
+                "wsvg-world-championship-maldives-2015-grand-finals-theviper-vs-yo": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "int",
+                                "name": "str",
+                                "verified": "bool",
+                                "warning": "bool",
+                                "country_code": "str",
+                                "supporter": "bool"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            },
+            "Losers Round 1": {
+                "wsvg-world-championship-maldives-2015-losers-round-1-dogao-vs-jordan-aoe": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "int",
+                                "name": "str",
+                                "verified": "bool",
+                                "warning": "bool",
+                                "country_code": "str",
+                                "supporter": "NoneType"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                },
+                "wsvg-world-championship-maldives-2015-losers-round-1-lojza-vs-lovecheng": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "NoneType",
+                                "name": "str"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            },
+            "Losers Round 2": {
+                "wsvg-world-championship-maldives-2015-losers-round-2-lovecheng-vs-yo": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "int",
+                                "name": "str",
+                                "verified": "bool",
+                                "warning": "bool",
+                                "country_code": "str",
+                                "supporter": "NoneType"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            },
+            "Losers Round 3": {
+                "wsvg-world-championship-maldives-2015-losers-round-3-bact-vs-yo": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "int",
+                                "name": "str",
+                                "verified": "bool",
+                                "warning": "bool",
+                                "country_code": "str",
+                                "supporter": "NoneType"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            },
+            "Loser's Finals": {
+                "wsvg-world-championship-maldives-2015-loser-s-finals-riut-vs-yo": {
+                    "participants": [
+                        {
+                            "score": "int",
+                            "player": {
+                                "id": "int",
+                                "name": "str",
+                                "verified": "bool",
+                                "warning": "bool",
+                                "country_code": "str",
+                                "supporter": "NoneType"
+                            }
+                        }
+                    ],
+                    "started": "NoneType",
+                    "finished": "bool",
+                    "bestof": "NoneType",
+                    "played": "float",
+                    "url": "NoneType",
+                    "drafts": [],
+                    "missing": "int",
+                    "recs": "bool",
+                    "live": "bool",
+                    "scheduled": "bool"
+                }
+            }
+        },
+        "matches": [],
+        "tournament_id": "str",
+        "series_id": "NoneType"
+    },
+    "24": {
+        "names": [
+            {}
+        ],
+        "ranks": {
+            "label": "str",
+            "total": "str",
+            "rating": "str",
+            "description": "str",
+            "wins": "bool",
+            "losses": "bool",
+            "rows": [
+                {
+                    "rank": "int",
+                    "rating": "int",
+                    "max_rating": "int",
+                    "total": "int",
+                    "wins": "int",
+                    "losses": "int",
+                    "player": {
+                        "id": "int",
+                        "name": "str",
+                        "verified": "bool",
+                        "warning": "bool",
+                        "country_code": "str",
+                        "supporter": "NoneType",
+                        "last_match": "int"
+                    }
+                }
+            ]
+        },
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": {
+            "names": [
+                {}
+            ],
+            "ranks": {
+                "label": "str",
+                "total": "str",
+                "rating": "str",
+                "description": "str",
+                "wins": "bool",
+                "losses": "bool",
+                "rows": [
+                    {
+                        "rank": "int",
+                        "rating": "int",
+                        "max_rating": "int",
+                        "total": "int",
+                        "wins": "int",
+                        "losses": "int",
+                        "player": {
+                            "id": "int",
+                            "name": "str",
+                            "verified": "bool",
+                            "warning": "bool",
+                            "country_code": "str",
+                            "supporter": "NoneType",
+                            "last_match": "int"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "21": {
+        "names": [
+            {}
+        ],
+        "pack": {
+            "name": "str",
+            "maps": [
+                {
+                    "name": "str",
+                    "picks": [],
+                    "wins": [],
+                    "dodges": "str",
+                    "total": "float",
+                    "duration": "int",
+                    "representative_id": "int"
+                }
+            ]
+        },
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": {
+            "names": [
+                {}
+            ],
+            "pack": {
+                "name": "str",
+                "maps": [
+                    {
+                        "name": "str",
+                        "picks": [],
+                        "wins": [],
+                        "dodges": "str",
+                        "total": "float",
+                        "duration": "int",
+                        "representative_id": "int"
+                    }
+                ]
+            }
+        }
+    },
+    "15": {
+        "total": "int",
+        "records": [
+            {
+                "key": "str",
+                "subject": {
+                    "type": "str",
+                    "data": {
+                        "id": "int",
+                        "verified": "bool",
+                        "warning": "bool",
+                        "country_code": "str",
+                        "name": "str",
+                        "supporter": "NoneType"
+                    }
+                },
+                "text": "str",
+                "timestamp": "int",
+                "url": "NoneType",
+                "type": "str",
+                "priority": "int"
+            }
+        ],
+        "page": "int",
+        "types": [
+            {}
+        ],
+        "players": [
+            {}
+        ],
+        "size": "int",
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": {
+            "total": "int",
+            "records": [
+                {
+                    "key": "str",
+                    "subject": {
+                        "type": "str",
+                        "data": {
+                            "id": "int",
+                            "verified": "bool",
+                            "warning": "bool",
+                            "country_code": "str",
+                            "name": "str",
+                            "supporter": "bool"
+                        }
+                    },
+                    "text": "str",
+                    "timestamp": "int",
+                    "url": "str",
+                    "type": "str",
+                    "priority": "int"
+                }
+            ],
+            "page": "int",
+            "types": [
+                {}
+            ],
+            "players": [
+                {}
+            ],
+            "size": "int"
+        }
+    },
+    "16": {
+        "total": "int",
+        "records": [
+            {
+                "match_id": "int",
+                "id": "int",
+                "name": "str",
+                "opp_id": "int",
+                "opp_name": "str",
+                "opp_civilization": "str",
+                "civilization": "str",
+                "map_name": "str",
+                "played": "int",
+                "file_id": "str",
+                "tournament": "NoneType",
+                "tournament_link": "NoneType",
+                "casters": [
+                    {
+                        "name": "str",
+                        "id": "int",
+                        "verified": "bool",
+                        "country_code": "str",
+                        "vod": "str"
+                    }
+                ],
+                "verified": "bool",
+                "opp_verified": "bool",
+                "country_code": "str",
+                "opp_country_code": "str"
+            }
+        ],
+        "casters": [
+            {}
+        ],
+        "maps": [
+            {}
+        ],
+        "tournaments": [
+            {}
+        ],
+        "page": "int",
+        "size": "int",
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": {
+            "total": "int",
+            "records": [
+                {
+                    "match_id": "int",
+                    "id": "int",
+                    "name": "str",
+                    "opp_id": "int",
+                    "opp_name": "str",
+                    "opp_civilization": "str",
+                    "civilization": "str",
+                    "map_name": "str",
+                    "played": "int",
+                    "file_id": "str",
+                    "tournament": "NoneType",
+                    "tournament_link": "NoneType",
+                    "casters": [
+                        {
+                            "name": "str",
+                            "id": "int",
+                            "verified": "bool",
+                            "country_code": "str",
+                            "vod": "str"
+                        }
+                    ],
+                    "verified": "bool",
+                    "opp_verified": "bool",
+                    "country_code": "str",
+                    "opp_country_code": "str"
+                }
+            ],
+            "casters": [
+                {}
+            ],
+            "maps": [
+                {}
+            ],
+            "tournaments": [
+                {}
+            ],
+            "page": "int",
+            "size": "int"
+        }
+    },
+    "25": {
+        "2024-07-20": [
+            {
+                "series_id": "str",
+                "tournament_name": "str",
+                "tournament_url": "str",
+                "tournament_type": "str",
+                "round_name": "str",
+                "tier": "str",
+                "bestof": "int",
+                "date": "str",
+                "time": "str",
+                "played": "int",
+                "participants": [
+                    {
+                        "name": "str"
+                    }
+                ]
+            }
+        ],
+        "2024-07-21": [
+            {
+                "series_id": "str",
+                "tournament_name": "str",
+                "tournament_url": "str",
+                "tournament_type": "str",
+                "round_name": "str",
+                "tier": "str",
+                "bestof": "int",
+                "date": "str",
+                "time": "str",
+                "played": "int",
+                "participants": [
+                    {
+                        "id": "int",
+                        "name": "str",
+                        "country_code": "str",
+                        "verified": "bool"
+                    }
+                ]
+            }
+        ]
+    },
+    "6": {
+        "hours": [
+            {
+                "hour": "int",
+                "hist": "int",
+                "curr": "int"
+            }
+        ],
+        "players": [
+            {
+                "name": "str",
+                "curr": "int",
+                "hist": "int"
+            }
+        ],
+        "teams": [
+            {
+                "team": "str",
+                "curr": "int",
+                "hist": "int"
+            }
+        ],
+        "dow": [
+            {
+                "name": "str",
+                "actual": "int",
+                "average": "int"
+            }
+        ],
+        "percent": [
+            {
+                "name": "str",
+                "today": "int",
+                "yesterday": "int"
+            }
+        ],
+        "viewers": [
+            {
+                "hour": "int",
+                "hist": "int",
+                "curr": "int"
+            }
+        ],
+        "users": [
+            {
+                "hour": "float",
+                "hist": "int",
+                "curr": "int"
+            }
+        ],
+        "matches": [
+            {
+                "hour": "float",
+                "hist": "int",
+                "curr": "int"
+            }
+        ],
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": {
+            "hours": [
+                {
+                    "hour": "int",
+                    "hist": "int",
+                    "curr": "int"
+                }
+            ],
+            "players": [
+                {
+                    "name": "str",
+                    "curr": "int",
+                    "hist": "int"
+                }
+            ],
+            "teams": [
+                {
+                    "team": "str",
+                    "curr": "int",
+                    "hist": "int"
+                }
+            ],
+            "dow": [
+                {
+                    "name": "str",
+                    "actual": "int",
+                    "average": "int"
+                }
+            ],
+            "percent": [
+                {
+                    "name": "str",
+                    "today": "int",
+                    "yesterday": "int"
+                }
+            ],
+            "viewers": [
+                {
+                    "hour": "int",
+                    "hist": "int",
+                    "curr": "int"
+                }
+            ],
+            "users": [
+                {
+                    "hour": "float",
+                    "hist": "int",
+                    "curr": "int"
+                }
+            ],
+            "matches": [
+                {
+                    "hour": "float",
+                    "hist": "int",
+                    "curr": "int"
+                }
+            ]
+        }
+    },
+    "9": {
+        "up": "bool",
+        "start": "NoneType",
+        "end": "NoneType"
+    },
+    "0": {
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": "NoneType"
+    },
+    "23": {
+        "cls": "int",
+        "target_id": "int",
+        "data": {
+            "2": "int",
+            "1": "int"
+        }
+    },
+    "14": {
+        "cls": "int",
+        "target_id": "int",
+        "data": "NoneType"
+    },
+    "28": {
+        "id": "int",
+        "status": "str",
+        "game": "str",
+        "rms": "str",
+        "lobby": "str",
+        "lobby_created": "int",
+        "ai": "bool",
+        "link": "str",
+        "server": "str",
+        "slots": "int",
+        "occupied_slots": "int",
+        "average_rating": "int",
+        "average_1v1_rating": "int",
+        "average_tg_rating": "int",
+        "password": "bool",
+        "type": "str",
+        "players": [
+            {
+                "id": "int",
+                "name": "str",
+                "number": "int",
+                "rating_tg": "int",
+                "country": "str",
+                "random_civilization": "bool",
+                "random_color": "bool",
+                "team": "int"
+            }
+        ],
+        "teams": [
+            {
+                "name": "str",
+                "members": [
+                    {}
+                ]
+            }
+        ],
+        "scenario": "str",
+        "spectating_disabled": "bool",
+        "rematch": "bool",
+        "spectating_delay": "int",
+        "data_mod": "str",
+        "custom": "bool",
+        "campaign": "str",
+        "verified": "bool",
+        "pro": "bool",
+        "ranked": "bool",
+        "min_rating": "int",
+        "leaderboard": "str",
+        "max_rating": "int",
+        "twitch": "bool"
+    },
+    "27": {
+        "id": "int",
+        "status": "str",
+        "game": "str",
+        "rms": "str",
+        "lobby_created": "int",
+        "twitch": "bool",
+        "ranked": "bool",
+        "link": "str",
+        "server": "str",
+        "slots": "int",
+        "diplomacy": "str",
+        "spectating_delay": "int",
+        "occupied_slots": "int",
+        "average_rating": "int",
+        "average_1v1_rating": "int",
+        "average_tg_rating": "int",
+        "started": "int",
+        "type": "str",
+        "leaderboard": "str",
+        "players": [
+            {
+                "id": "int",
+                "name": "str",
+                "twitch": "str",
+                "number": "int",
+                "rating": "int",
+                "rating_1v1": "int",
+                "rating_tg": "int",
+                "country": "str",
+                "civilization": "str",
+                "color": "int",
+                "color_hex": "str",
+                "team": "int"
+            }
+        ],
+        "teams": [
+            {
+                "members": [
+                    {}
+                ]
+            }
+        ],
+        "verified": "bool",
+        "custom": "bool",
+        "lobby": "str",
+        "spectating_disabled": "bool",
+        "pro": "bool",
+        "controller": "bool",
+        "ai": "bool",
+        "min_rating": "int",
+        "rematch": "bool",
+        "data_mod": "str",
+        "scenario": "str",
+        "campaign": "str",
+        "max_rating": "int"
+    },
+    "12": {
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": [
+            {
+                "subject": {
+                    "type": "str",
+                    "data": {
+                        "id": "int",
+                        "verified": "bool",
+                        "warning": "bool",
+                        "country_code": "str",
+                        "name": "str",
+                        "supporter": "bool"
+                    }
+                },
+                "text": "str",
+                "timestamp": "int",
+                "url": "str",
+                "type": "str",
+                "priority": "int"
+            }
+        ]
+    },
+    "10": {
+        "cls": "int",
+        "target_id": "NoneType",
+        "data": [
+            {
+                "name": "str",
+                "picks": [],
+                "wins": [],
+                "dodges": "str",
+                "total": "float",
+                "duration": "int",
+                "representative_id": "int"
+            }
+        ]
+    }
+}
