@@ -42,23 +42,23 @@ class DatabaseConnectionPool:
                 await self.handle_connection_failure(connection)
                 continue
 
-    async def get_connection(self) -> aiomysql.Connection:
+    async def get_connection(self):
         """Asynchronously get a connection from the pool."""
         return await self.pool.acquire()
 
     async def execute_query(self, query: str, params=None) -> list[tuple]:
         """Asynchronously execute a query using a connection from the pool."""
-        async with await self.get_connection() as connection:
-            cursor_manager = cast(aiomysql.Cursor,connection.cursor())
-            async with cursor_manager as cursor:
+        async with self.pool.acquire() as connection:
+            async with connection.cursor() as cursor:
+                cursor = cast(aiomysql.Cursor,cursor)
                 await cursor.execute(query, params)
                 return await cursor.fetchall()
 
     async def execute_update(self, query: str, params=None) -> int:
         """Asynchronously execute an update or insert query."""
-        async with await self.get_connection() as connection:
-            cursor_manager = cast(aiomysql.Cursor,connection.cursor())
-            async with cursor_manager as cursor:
+        async with self.pool.acquire() as connection:
+            async with connection.cursor() as cursor:
+                cursor = cast(aiomysql.Cursor,cursor)
                 await cursor.execute(query, params)
                 await connection.commit()
                 return cursor.rowcount

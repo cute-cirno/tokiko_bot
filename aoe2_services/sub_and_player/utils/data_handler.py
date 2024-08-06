@@ -2,10 +2,10 @@ import asyncio
 import json
 from nonebot.log import logger as logging
 
-from typing import Dict, Any, Union, Optional
+from typing import Dict, Any, Union, Optional, Tuple, List
 
 from .receive_data import websocket_client
-from ..model import Lobby, Ongoing, OngoingModel, LobbyModel
+from ..model import Lobby, Ongoing, OngoingRoom, LobbyRoom
 
 
 class DataHandler:
@@ -29,6 +29,10 @@ class DataHandler:
         while True:
             try:
                 message = await self._message_queue.get()
+                if message == "INITIALIZE":
+                    self._lobby.initialize()
+                    self._ongoing.initialize()
+                    continue
                 data = json.loads(message)
                 await self.process_message(data)
             except json.JSONDecodeError:
@@ -48,13 +52,13 @@ class DataHandler:
             if not message_data:
                 self._ongoing.remove_room(target_id)
             else:
-                ongoing_room = OngoingModel(message_data)
+                ongoing_room = OngoingRoom(message_data)
                 self._ongoing.add_room(ongoing_room)
         elif data_cls == 28:
             if not message_data:
                 self._lobby.remove_room(target_id)
             else:
-                lobby_room = LobbyModel(message_data)
+                lobby_room = LobbyRoom(message_data)
                 self._lobby.add_room(lobby_room)
         elif data_cls == 3:
             for sub_data in message_data:
@@ -64,8 +68,10 @@ class DataHandler:
     async def get_lobby(self):
         return self._lobby
 
-    async def get_room(self, identifier: Union[int, str])->Union[LobbyModel, OngoingModel, None]:
-        return self._ongoing.get_room(identifier) or self._lobby.get_room(identifier)
+    def get_room(self, identifier: Union[int, str])->Tuple[List[Optional[LobbyRoom]], List[Optional[OngoingRoom]]]:
+        onging = self._ongoing.get_room(identifier)
+        lobby = self._lobby.get_room(identifier)
+        return (lobby, onging)
     
     @property
     def room_count(self)->tuple:

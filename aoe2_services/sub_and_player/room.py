@@ -1,24 +1,40 @@
 from nonebot import on_command
+from nonebot.matcher import Matcher
 
 from nonebot.adapters.onebot.v11 import MessageEvent
-from nonebot.params import CommandArg
+from nonebot.params import CommandArg, ArgPlainText
 
-from .utils.process import name_or_id_to_room_msg, get_all_room_msg
-
-
+from .utils.process import check_player_and_get_room, get_all_room_msg, room2msg, candidate_msg
 
 spect_player = on_command("查房")
 all_room = on_command("有多少房间")
 
 
 @spect_player.handle()
-async def _(event: MessageEvent, args: str = CommandArg()):
-    msg = await name_or_id_to_room_msg(args)
-    if msg:
+async def _(event: MessageEvent, matcher: Matcher, args=CommandArg()):
+    args = str(args).strip()
+    flag, room_list = check_player_and_get_room(args)
+    if not flag:
+        await spect_player.finish("没有找到房间")
+    if len(room_list) == 1:
+        msg = room2msg(room_list[0])
+        await spect_player.finish(msg if msg else "没有找到房间")
+    else:
+        msg = candidate_msg(room_list)
+        matcher.state['room_list'] = room_list
         await spect_player.send(msg)
-    await spect_player.finish("没有找到房间")
     
     
+@spect_player.got("order", prompt="请选择房间序号")
+async def _(matcher:Matcher, event:MessageEvent, order:str = ArgPlainText()):
+    if not order.isdigit():
+        await spect_player.finish("错误序号，退出选择")
+    index = int(order) - 1
+    if index < 1 or index >= len(matcher.state['room_list']):
+        await spect_player.finish("错误序号，退出选择")
+    await spect_player.finish(room2msg(matcher.state['room_list'][index]))
+        
+        
 @all_room.handle()
 async def _(event: MessageEvent):
     msg = get_all_room_msg()
@@ -26,11 +42,6 @@ async def _(event: MessageEvent):
         await all_room.finish(msg)
     else:
         await all_room.finish("error")
-    
-
-    
-    
-
 
 
 # query = on_command('查询玩家',aliases={'查询id','查询ID','查id'}, priority=5)

@@ -24,7 +24,7 @@ class WebSocketClient:
 
     async def handle_message(self, message: Dict[str, Any]) -> None:
         cls = int(message['cls'])
-        if cls in (27,-1):
+        if cls in (28,-1):
             self.print_cls_data(cls, message)
         if cls == 3:
             data_list = message.get('data', [])
