@@ -1,9 +1,10 @@
 import json
 import base64
 from typing import Any, Dict
-from .cache_utils import CachedFileReader
 from functools import wraps
 from collections import OrderedDict
+
+from .cache_utils import CachedFileReader
 
 async def imagefile_to_base64(image_path: str) -> str:
     """

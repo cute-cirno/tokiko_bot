@@ -6,9 +6,10 @@ from nonebot.plugin import PluginMetadata
 from nonebot.permission import SUPERUSER
 from nonebot.matcher import Matcher
 from nonebot.adapters import Message
-from nonebot.adapters.onebot.v11 import MessageEvent,MessageSegment
+from nonebot.adapters.onebot.v11 import MessageEvent, MessageSegment
 from nonebot.params import CommandArg
 from nonebot_plugin_txt2img import Txt2Img
+from nonebot.log import logger
 
 from .config import config
 from .database import DatabaseConnectionPool
@@ -26,9 +27,10 @@ __plugin_meta__ = PluginMetadata(
 # 获取 nonebot 驱动
 driver = get_driver()
 
+
 @driver.on_startup
 async def init_mysql_pool():
-    db = await DatabaseConnectionPool.async_create(
+    await DatabaseConnectionPool.async_create(
         host=config.database_host,
         port=config.database_port,
         user=config.database_user,
@@ -53,28 +55,34 @@ async def handle_first_receive(
     sql_type = arg.split()[0].lower()
     try:
         msg = ''
-        if sql_type in ('select','desc','show'):
+        if sql_type in {'select', 'desc', 'show'}:
             result = await db.execute_query(arg)
-            for r in result:
+            if result:
+                # 获取表头
+                headers = result[0].keys()
+                msg += ' '.join(map(str, headers)) + '\n'
                 max_count = 20
-                if max_count > 0:
-                    msg += ' '.join(map(str,r))
-                    msg += '\n'
-                    max_count -= 1
+                for r in result:
+                    if max_count > 0:
+                        # 添加数据行
+                        msg += ' '.join(map(str, r.values())) + '\n'
+                        max_count -= 1
         else:
             result = await db.execute_update(arg)
             if result == 0:
                 msg = "没有匹配的记录"
             else:
                 msg = f"OK，{result}行已被更改"
-            await matcher.finish(msg)
+
         font_size = 18
         text = msg
-        Txt2Img().set_font_size(font_size)
-        pic = Txt2Img().draw('', text)
+        txt2img = Txt2Img()
+        txt2img.set_font_size(font_size)
+        pic = txt2img.draw('', text)
         msg = MessageSegment.image(pic)
         await matcher.finish(msg)
-    except FinishedException as fe:
+    except FinishedException:
         pass
     except Exception as e:
-        await matcher.finish(f"Query failed: {e}\n{result}")
+        logger.error(f"Query failed: {e}")
+        await matcher.finish(f"Query failed: {e}")

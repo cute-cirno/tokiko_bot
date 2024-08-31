@@ -4,6 +4,7 @@ import websockets
 from collections import defaultdict
 from typing import Any, Dict, List, Union
 
+
 class WebSocketClient:
     def __init__(self, uri: str):
         self.uri = uri
@@ -24,7 +25,7 @@ class WebSocketClient:
 
     async def handle_message(self, message: Dict[str, Any]) -> None:
         cls = int(message['cls'])
-        if cls in (28,-1):
+        if cls in (28, -1):
             self.print_cls_data(cls, message)
         if cls == 3:
             data_list = message.get('data', [])
@@ -33,16 +34,18 @@ class WebSocketClient:
                     item_cls = data_item.get('cls')
                     if item_cls:
                         await self.handle_message({'cls': item_cls, 'data': data_item})
+
     def print_cls_data(self, cls, data: Dict[str, Any]):
         print({f'{cls}': data})
         print()
         print()
-    
+
+
 async def main() -> None:
     uri = "wss://aoe2recs.com/dashboard/api/"
     WS = WebSocketClient(uri)
     await WS.connect()
-    
+
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -1,9 +1,9 @@
 from nonebot import on_command
 from nonebot.matcher import Matcher
 from nonebot.adapters.onebot.v11 import MessageSegment, MessageEvent
-from nonebot.typing import T_State
 from nonebot.adapters import Message
-from nonebot.params import CommandArg, ArgPlainText
+from nonebot.params import CommandArg
+
 from ..utils.common_utils import load_json_file
 from .process import get_gathering_rate_base64_image
 

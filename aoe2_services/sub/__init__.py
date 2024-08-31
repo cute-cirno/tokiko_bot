@@ -1,50 +1,26 @@
 from nonebot import on_command
-from nonebot.exception import FinishedException
 
-from nonebot.adapters.onebot.v11 import MessageEvent, GroupMessageEvent
+from nonebot.adapters.onebot.v11 import GroupMessageEvent
 from nonebot.params import CommandArg
 from nonebot_plugin_waiter import prompt
 
-from .utils.process import (
-    get_player_id_list,
-    get_player_info_msg,
-    get_candidate_msg,
+from .process import (
     get_player_by_id,
     submit_sub_player,
     cancle_sub_player_list,
     get_sub_player_msg,
     get_sub_player_list,
     submit_turn_sub,
-    submit_turn_end,
+    submit_turn_end
 )
-from ...AsyncDB import DatabaseConnectionPool
 
+from ..common.process import get_player_id_list, get_candidate_msg
 
-player_info = on_command("查询", priority=1)
 sub_player = on_command("订阅")
 cancle_sub = on_command("取消订阅")
 sub_list = on_command("订阅列表")
 turn_sub = on_command("调整通知")
 turn_end = on_command("调整狙击")
-
-
-@player_info.handle()
-async def _(event: MessageEvent, arg=CommandArg()):
-    arg = str(arg)
-    player_id_list = await get_player_id_list(arg)
-    if not player_id_list:
-        await player_info.finish("没有找到该玩家")
-    elif len(player_id_list) == 1:
-        msg = await get_player_info_msg(player_id_list[0])
-        await player_info.finish(msg if msg else "没有找到该玩家")
-    else:
-        resp = await prompt(await get_candidate_msg(player_id_list), timeout=60)
-        if str(resp).isdigit():
-            idx = int(str(resp))
-            if idx >= 1 and idx <= len(player_id_list):
-                await player_info.finish(
-                    await get_player_info_msg(player_id_list[idx - 1])
-                )
 
 
 @sub_player.handle()
@@ -108,7 +84,7 @@ async def _(event: GroupMessageEvent, arg=CommandArg()):
 @sub_list.handle()
 async def _(event: GroupMessageEvent):
     await sub_list.finish(await get_sub_player_msg(event.user_id, event.group_id))
-    
+
 
 @turn_sub.handle()
 async def _(event: GroupMessageEvent, arg=CommandArg()):
@@ -125,6 +101,7 @@ async def _(event: GroupMessageEvent, arg=CommandArg()):
     for idx in idx_list:
         count += await submit_turn_sub(sub_list[idx - 1][0], event.user_id, event.group_id)
     await turn_sub.finish(f"调整了{count}条通知")
+
 
 @turn_end.handle()
 async def _(event: GroupMessageEvent, arg=CommandArg()):

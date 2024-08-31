@@ -1,10 +1,10 @@
 from nonebot import on_command
 from nonebot.matcher import Matcher
-
 from nonebot.adapters.onebot.v11 import MessageEvent
 from nonebot.params import CommandArg, ArgPlainText
 
-from .utils.process import check_player_and_get_room, get_all_room_msg, room2msg, candidate_msg
+from .process import check_player_and_get_room, get_all_room_msg, room2msg, candidate_msg
+from ..datacenter.dashboard import RoomNotFoundError
 
 spect_player = on_command("查房")
 all_room = on_command("有多少房间")
@@ -13,8 +13,9 @@ all_room = on_command("有多少房间")
 @spect_player.handle()
 async def _(event: MessageEvent, matcher: Matcher, args=CommandArg()):
     args = str(args).strip()
-    flag, room_list = check_player_and_get_room(args)
-    if not flag:
+    try:
+        room_list = check_player_and_get_room(args)
+    except RoomNotFoundError:
         await spect_player.finish("没有找到房间")
     if len(room_list) == 1:
         msg = room2msg(room_list[0])
