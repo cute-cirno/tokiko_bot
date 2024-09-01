@@ -14,7 +14,8 @@ class Sub():
         self.end: bool = bool(sub_info.get("end", False))
         self.sub_type: int = 0
 
-    def isexpire(self) -> bool:
+    @property
+    def expired(self) -> bool:
         if self.sub_type == 0:
             delta = timedelta(days=90)
         elif self.sub_type == 1:

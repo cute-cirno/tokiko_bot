@@ -47,3 +47,7 @@ civ_dict = {
     "Vietnamese": "越南",
     "Vikings": "维京",
 }
+
+
+class NotFoundError(Exception):
+    pass

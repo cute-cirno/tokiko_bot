@@ -30,7 +30,7 @@ def room2msg(room: Room):
         msg += f"平均分数:{room.average_rating}\n"
         msg += f"玩家列表:昵称/颜色/文明/分数(单挑/组排)\n"
         msg += f"观战延迟:{room.spectating_delay}秒\n"
-        player_info_list = []
+        player_info_list:list[list[str]] = []
         for player in room.players:
             if player.id == 0:
                 player_info_list.append(

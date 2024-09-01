@@ -2,9 +2,12 @@ from collections import defaultdict
 from datetime import datetime
 from abc import ABC, abstractmethod
 
+import nonebot
+from nonebot.adapters.onebot.v11 import MessageSegment
+
 from .model.sub import Sub
 from .model.room import Room
-from ...AsyncDB import DatabaseConnectionPool as DB
+from ..AsynOrm.models import Aoe2Fan, Aoe2Player
 
 class SubPusher(ABC):
     _initialized = False
@@ -23,7 +26,7 @@ class SubPusher(ABC):
         group_push: dict[int, list[Sub]] = defaultdict(list)
         for sub_id in need_push_set:
             for sub in self.sub_dict[sub_id]:
-                if not sub.isexpire():
+                if not sub.expired:
                     group_push[sub.group_id].append(sub)
                 else:
                     self.sub_dict[sub_id].remove(sub)
@@ -42,47 +45,50 @@ class SubPusher(ABC):
                 group_sub_list=group_sub_list, type="end")
             await self._push(group_id, info)
 
-    @abstractmethod
     async def _push(self, group_id: int, push_info: dict):
-        """需要实现往群里发消息"""
-        raise NotImplementedError
+        at_msg_list = [MessageSegment.at(qq_id)
+                       for qq_id in push_info.get("at_set", set())]
+        bot = nonebot.get_bot()
+        await bot.call_api('send_group_msg', **{'group_id': group_id, 'message': push_info})
 
-    @abstractmethod
-    async def get_name_nickname_info(self, player_info: dict[int, list[str]]) -> dict[str, list[str]]:
-        """实现把传入的玩家id(int)转为玩家昵称"""
-        raise NotImplementedError
+
 
     async def get_push_info(self, group_sub_list: list[Sub], type: str) -> dict:
         info = {}
         at_set: set[int] = set()
-        player_info: dict[int, list[str]] = {}
+        player_info: dict[str, list[str]] = {}
         for sub in group_sub_list:
+            p = await Aoe2Player.get(player_id=sub.player_id)
             at_set.add(sub.qq_id)
-            player_info[sub.player_id].append(sub.nickname)
+            player_info[p.player_name].append(sub.nickname)
         info["at_set"] = at_set
-        info["player_info"] = await self.get_name_nickname_info(player_info)
+        info["player_info"] = player_info
         info["type"] = type
         return info
 
     async def load_sub(self):
-        db = DB()  # Ensure DB is properly defined and initialized
-        sql = """
-            SELECT
-                player_id, qq_id, group_id, sub, end, mark, create_time
-            FROM
-                aoe2_fan
-        """
         try:
-            sub_info_list = await db.execute_query(sql)
-        except Exception as e:
-            # Log or handle the exception
-            raise Exception
-        else:
+            # 查询所有记录并提取字段值
+            sub_info_list = await Aoe2Fan.all().values(
+                'player_id', 'qq_id', 'group_id', 'sub', 'end', 'mark', 'create_time'
+            )
+            
+            # 处理查询结果
             for sub_info in sub_info_list:
-                player_id: int = sub_info['player_id']
+                player_id = sub_info['player_id']
                 self.sub_set.add(player_id)
+                
+                # 创建 Sub 实例并添加到字典
                 sub = Sub(**sub_info)
+                
+                if player_id not in self.sub_dict:
+                    self.sub_dict[player_id] = []
+                    
                 self.sub_dict[player_id].append(sub)
+
+        except Exception as e:
+            # 记录或处理异常
+            raise Exception("Failed to load sub data")
 
     def sub_change_handler(self):
         pass
